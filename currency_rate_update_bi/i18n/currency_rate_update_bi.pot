@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#   * currency_rate_update_BI
+#   * currency_rate_update_bi
 #
 msgid ""
 msgstr ""
@@ -13,17 +13,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. module: currency_rate_update_BI
-#: model_terms:res.currency.rate.provider,service:currency_rate_update_BI.service_bi
+#. module: currency_rate_update_bi
+#: model_terms:res.currency.rate.provider,service:currency_rate_update_bi.service_bi
 msgid "Bank Indonesia (Kurs Transaksi)"
 msgstr ""
 
-#. module: currency_rate_update_BI
-#: code:addons/currency_rate_update_BI/models/res_currency_rate_provider_BI.py:0
+#. module: currency_rate_update_bi
+#: code:addons/currency_rate_update_bi/models/res_currency_rate_provider_bi.py:0
 msgid "Cannot connect to Bank Indonesia webservice.\nPlease check your internet connection.\nURL: %(url)s\nError: %(error)s"
 msgstr ""
 
-#. module: currency_rate_update_BI
-#: code:addons/currency_rate_update_BI/models/res_currency_rate_provider_BI.py:0
+#. module: currency_rate_update_bi
+#: code:addons/currency_rate_update_bi/models/res_currency_rate_provider_bi.py:0
 msgid "Bank Indonesia provider: Company base currency %(currency)s is not supported. BI supports IDR as base or any of: %(list)s"
 msgstr ""

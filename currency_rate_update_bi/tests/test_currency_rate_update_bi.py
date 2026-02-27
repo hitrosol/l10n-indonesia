@@ -224,8 +224,8 @@ class TestResCurrencyRateProviderBI(common.TransactionCase):
         cls.CurrencyRate.search([]).unlink()
 
     @patch(
-        "odoo.addons.currency_rate_update_BI.models"
-        ".res_currency_rate_provider_BI.urlopen",
+        "odoo.addons.currency_rate_update_bi.models"
+        ".res_currency_rate_provider_bi.urlopen",
         side_effect=_mock_urlopen,
     )
     def test_scheduled_update(self, mock_urlopen):
@@ -237,8 +237,8 @@ class TestResCurrencyRateProviderBI(common.TransactionCase):
         self.assertIn(self.eur_currency, currencies)
 
     @patch(
-        "odoo.addons.currency_rate_update_BI.models"
-        ".res_currency_rate_provider_BI.urlopen",
+        "odoo.addons.currency_rate_update_bi.models"
+        ".res_currency_rate_provider_bi.urlopen",
         side_effect=_mock_urlopen,
     )
     def test_wizard_update(self, mock_urlopen):
@@ -260,8 +260,8 @@ class TestResCurrencyRateProviderBI(common.TransactionCase):
         self.assertEqual(len(rates), 8)
 
     @patch(
-        "odoo.addons.currency_rate_update_BI.models"
-        ".res_currency_rate_provider_BI.urlopen",
+        "odoo.addons.currency_rate_update_bi.models"
+        ".res_currency_rate_provider_bi.urlopen",
         side_effect=_mock_urlopen,
     )
     def test_rate_value_idr_base(self, mock_urlopen):
@@ -339,8 +339,8 @@ class TestResCurrencyRateProviderBI(common.TransactionCase):
         self.assertNotIn("IDR", currencies)
 
     @patch(
-        "odoo.addons.currency_rate_update_BI.models"
-        ".res_currency_rate_provider_BI.urlopen",
+        "odoo.addons.currency_rate_update_bi.models"
+        ".res_currency_rate_provider_bi.urlopen",
         side_effect=_mock_urlopen,
     )
     def test_foreign_base_currency_cross_rate(self, mock_urlopen):
@@ -413,8 +413,8 @@ class TestResCurrencyRateProviderBI(common.TransactionCase):
         self.assertIn("not supported", str(cm.exception))
 
     @patch(
-        "odoo.addons.currency_rate_update_BI.models"
-        ".res_currency_rate_provider_BI.urlopen"
+        "odoo.addons.currency_rate_update_bi.models"
+        ".res_currency_rate_provider_bi.urlopen"
     )
     def test_connection_error(self, mock_urlopen):
         """Test handling of connection error."""
@@ -512,8 +512,8 @@ class TestResCurrencyRateProviderBI(common.TransactionCase):
         self.assertIn("2026-02-07", result)
 
     @patch(
-        "odoo.addons.currency_rate_update_BI.models"
-        ".res_currency_rate_provider_BI.urlopen",
+        "odoo.addons.currency_rate_update_bi.models"
+        ".res_currency_rate_provider_bi.urlopen",
         side_effect=_mock_urlopen,
     )
     def test_foreign_base_with_idr_selected(self, mock_urlopen):

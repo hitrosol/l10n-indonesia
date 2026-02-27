@@ -39,7 +39,7 @@ def post_init_hook(cr, registry):
 
     for currency_id, currency_name, rate_count in rows:
         _logger.warning(
-            "currency_rate_update_BI: Found %d stale rate record(s) for base "
+            "currency_rate_update_bi: Found %d stale rate record(s) for base "
             "currency '%s'. These cause incorrect company_rate display. "
             "Removing them now.",
             rate_count,
@@ -50,7 +50,7 @@ def post_init_hook(cr, registry):
             (currency_id,),
         )
         _logger.info(
-            "currency_rate_update_BI: Removed %d rate record(s) for base "
+            "currency_rate_update_bi: Removed %d rate record(s) for base "
             "currency '%s'.",
             rate_count,
             currency_name,
